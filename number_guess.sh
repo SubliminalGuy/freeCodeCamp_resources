@@ -30,13 +30,10 @@ GUESS_LOOP() {
       fi
     done
     ((NUMBER_GUESSES+=1))
-    EXIT_FUNCTION
+    CLOSE_FUNCTION
   fi
 
-  
-  
 }
-
 
 MAIN_FUNCTION() {
   echo "Enter your username:"
@@ -55,7 +52,7 @@ GUESS_LOOP
 
 
 
-EXIT_FUNCTION() {
+CLOSE_FUNCTION() {
   
   if [[ -z $PLAYED_GAMES ]]
   then
@@ -77,18 +74,4 @@ EXIT_FUNCTION() {
   exit
 }
 
-
 MAIN_FUNCTION
-
-
-
-
-
-
-
-
-
-
-
-
-
